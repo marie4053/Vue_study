@@ -9,7 +9,7 @@ defineProps({
 <!-- <slot> 엘리먼트는 부모가 제공한 슬롯 컨텐츠가 렌더링되어야 하는 위치를 나타내는 슬롯 아울렛(outlet)입니다. -->
 
 <template>
-  <Transition name="modal">
+  <Transition name="modal-none">
     <div v-if="show" class="modal-mask">
       <div class="modal-container">
         <div class="modal-header">
@@ -65,19 +65,5 @@ defineProps({
   cursor: pointer;
   outline: none;
   border: none;
-}
-
-.modal-enter-from {
-  opacity: 0;
-}
-
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter-from .modal-container,
-.modal-leave-to .modal-container {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 </style>

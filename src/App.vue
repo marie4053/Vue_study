@@ -3,10 +3,12 @@ import { ref, computed } from 'vue'
 import HomePage from './views/HomePage.vue'
 import ModalPage from './views/ModalPage.vue'
 import NotFound from './views/NotFound.vue'
+import Modal2Page from './views/Modal2Page.vue'
 
 const routes = {
   '/': HomePage,
   '/modal': ModalPage,
+  '/modal2': Modal2Page,
   '/non-existent-path': NotFound,
 }
 
@@ -25,7 +27,8 @@ const currentView = computed(() => {
   <div class="">
     <nav>
       <a href="#/">Home</a>
-      <a href="#/modal">Modal</a>
+      <a href="#/modal">Modal1</a>
+      <a href="#/modal2">Modal2</a>
       <a href="#/non-existent-path">잘못된 링크</a>
     </nav>
     <!-- <component> : 동적 컴포넌트 또는 엘리먼트를 렌더링하기 위한 "메타 컴포넌트"입니다. -->
@@ -56,7 +59,7 @@ a:hover {
   width: 600px;
   margin: auto;
   padding: 40px;
-  border-radius: 8px; /* 모서리 둥글게 */
+  border-radius: 8px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 </style>

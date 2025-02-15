@@ -1,5 +1,5 @@
 <script setup>
-import ModalComponent from '@/components/ModalComponent.vue'
+import Modal2Component from '@/components/Modal2Component.vue'
 import { ref } from 'vue'
 
 const showModal = ref(false)
@@ -10,17 +10,17 @@ const showModal = ref(false)
 <template>
   <div class="dynamic-view">
     <div class="container">
-      <h3 class="title">Transition ✅ 모달</h3>
+      <h3 class="title">Transition ❌ 모달</h3>
       <button id="show-modal" @click="showModal = true">Show Modal</button>
     </div>
 
     <Teleport to="body">
-      <ModalComponent :show="showModal" @close="showModal = false">
+      <Modal2Component :show="showModal" @close="showModal = false">
         <template #header><h3>모달의 제목입니다.</h3></template>
         <template #body
           ><p>모달의 내용은 slot과 template을 활용해서 부모에서 전달해줄 수 있습니다.</p></template
         >
-      </ModalComponent>
+      </Modal2Component>
     </Teleport>
   </div>
 </template>
