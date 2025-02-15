@@ -1,7 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Vue Study 공간입니다.</div>
+  <div class="home-container">
+    <h3>Vue Study 공간</h3>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.home-container {
+  display: flex;
+  justify-content: center;
+}
+</style>
