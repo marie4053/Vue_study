@@ -13,15 +13,12 @@ const showModal = ref(false)
       <h3 class="title">Transition ❌ 모달</h3>
       <button id="show-modal" @click="showModal = true">Show Modal</button>
     </div>
-
-    <Teleport to="body">
-      <Modal2Component :show="showModal" @close="showModal = false">
-        <template #header><h3>모달의 제목입니다.</h3></template>
-        <template #body
-          ><p>모달의 내용은 slot과 template을 활용해서 부모에서 전달해줄 수 있습니다.</p></template
-        >
-      </Modal2Component>
-    </Teleport>
+    <Modal2Component :show="showModal" @close="showModal = false">
+      <template #header><h3>모달의 제목입니다.</h3></template>
+      <template #body
+        ><p>모달의 내용은 slot과 template을 활용해서 부모에서 전달해줄 수 있습니다.</p></template
+      >
+    </Modal2Component>
   </div>
 </template>
 
