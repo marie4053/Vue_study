@@ -10,6 +10,11 @@ const router = createRouter({
     { path: '/vuetify', name: 'vuetify', component: () => import('@/views/VuefityTest.vue') },
     { path: '/barchart', name: 'barChart', component: () => import('@/views/BarChartView.vue') },
     { path: '/linechart', name: 'lineChart', component: () => import('@/views/LineChartView.vue') },
+    {
+      path: '/doughnutchart',
+      name: 'doughnutChart',
+      component: () => import('@/views/DoughnutChartView.vue'),
+    },
   ],
 })
 

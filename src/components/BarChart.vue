@@ -60,7 +60,7 @@ const chartOptions = ref({
   // 부모 요소 크기에 맞춰 차트 크기 자동 조정
   responsive: true,
   // true일 경우, 가로 세로 비율을 유지함
-  maintainAspectRatio: false,
+  maintainAspectRatio: true,
   layout: {
     padding: 10,
   },

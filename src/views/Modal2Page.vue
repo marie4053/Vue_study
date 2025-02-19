@@ -9,7 +9,7 @@ const showModal = ref(false)
 
 <template>
   <div>
-    <div class="container">
+    <div>
       <h3 class="title">Transition ❌ 모달</h3>
       <button id="show-modal" @click="showModal = true">Show Modal</button>
     </div>
@@ -23,12 +23,6 @@ const showModal = ref(false)
 </template>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #show-modal {
   color: #fff;
   background: #222222;
