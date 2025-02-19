@@ -8,6 +8,9 @@ import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
+// router
+import router from './router'
+
 // Components
 import App from './App.vue'
 
@@ -16,6 +19,4 @@ const vuetify = createVuetify({
   directives,
 })
 
-// import vuetify from './plugins/vuetify' // 추가!
-
-createApp(App).use(vuetify).mount('#app')
+createApp(App).use(router).use(vuetify).mount('#app')

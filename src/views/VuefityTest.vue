@@ -1,5 +1,7 @@
 <script setup></script>
 
 <template>
-  <v-btn density="comfortable">Primary 버튼</v-btn>
+  <div>
+    <v-btn density="comfortable">Primary 버튼</v-btn>
+  </div>
 </template>

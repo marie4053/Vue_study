@@ -8,7 +8,7 @@ const showModal = ref(false)
 <!-- Teleport: 컴포넌트 템플릿의 일부를 해당 컴포넌트의 DOM 계층의 외부의 DOM 노드로 이동 할 수 있게 해주는 빌트인 컴포넌트 -->
 
 <template>
-  <div class="dynamic-view">
+  <div>
     <div class="container">
       <h3 class="title">Transition ✅ 모달</h3>
       <button id="show-modal" @click="showModal = true">Show Modal</button>

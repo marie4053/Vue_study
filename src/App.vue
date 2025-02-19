@@ -1,38 +1,16 @@
 <script setup>
-import { ref, computed } from 'vue'
-import HomePage from './views/HomePage.vue'
-import ModalPage from './views/ModalPage.vue'
-import Modal2Page from './views/Modal2Page.vue'
-import VuefityTest from './views/VuefityTest.vue'
-
-const routes = {
-  '/': HomePage,
-  '/modal': ModalPage,
-  '/modal2': Modal2Page,
-  '/vuetify': VuefityTest,
-}
-
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || '/']
-})
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
   <div class="app-container">
     <nav>
-      <a href="#/">Home</a>
-      <a href="#/modal">Modal1</a>
-      <a href="#/modal2">Modal2</a>
-      <a href="#/vuetify">Vuetify</a>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/modal1">Modal1</RouterLink>
+      <RouterLink to="/modal2">Modal2</RouterLink>
+      <RouterLink to="/vuetify">Vuetify</RouterLink>
     </nav>
-    <!-- <component> : 동적 컴포넌트 또는 엘리먼트를 렌더링하기 위한 "메타 컴포넌트"입니다. -->
-    <component :is="currentView" class="dynamic-view" />
+    <RouterView class="dynamic-view" />
   </div>
 </template>
 
