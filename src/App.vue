@@ -9,6 +9,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/modal1">Modal1</RouterLink>
       <RouterLink to="/modal2">Modal2</RouterLink>
       <RouterLink to="/vuetify">Vuetify</RouterLink>
+      <RouterLink to="/barchart">BarChart</RouterLink>
+      <RouterLink to="/linechart">LineChart</RouterLink>
     </nav>
     <RouterView class="dynamic-view" />
   </div>
