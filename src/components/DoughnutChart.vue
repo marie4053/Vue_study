@@ -1,8 +1,10 @@
 <script setup>
 import { Doughnut } from 'vue-chartjs'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
+import annotationPlugin from 'chartjs-plugin-annotation'
+
 import { ref } from 'vue'
-ChartJS.register(ArcElement, Tooltip, Legend)
+ChartJS.register(ArcElement, Tooltip, Legend, annotationPlugin)
 const props = defineProps({
   nutritionInfo: String,
   inputData: Number,
@@ -44,12 +46,13 @@ const chartData = ref({
 const chartOptions = ref({
   responsive: true,
   maintainAspectRatio: false,
-  layout: {
-    padding: 10,
-  },
+  // layout: {
+  //   padding: 0,
+  // },
   plugins: {
     // 범례 위치
     legend: {
+      display: false,
       position: 'bottom',
       labels: {
         font: { size: '12px' },
@@ -62,16 +65,16 @@ const chartOptions = ref({
       font: { size: '20px' },
       padding: { bottom: 20 },
     },
-    // annotation: {
-    //   annotations: {
-    //     dLabel: {
-    //       type: 'doughnutLabel',
-    //       content: '나트륨',
-    //       font: { size: 60 },
-    //       color: 'black',
-    //     },
-    //   },
-    // },
+    annotation: {
+      annotations: {
+        dLabel: {
+          type: 'doughnutLabel',
+          content: props.nutritionInfo,
+          font: { size: 10 },
+          color: 'black',
+        },
+      },
+    },
   },
 })
 </script>
