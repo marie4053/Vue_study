@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/vuetify">Vuetify</RouterLink>
       <RouterLink to="/barchart">BarChart</RouterLink>
       <RouterLink to="/linechart">LineChart</RouterLink>
-      <RouterLink to="/doughnutchart">DoughnutChart</RouterLink>
+      <RouterLink to="/piechart">PieChart</RouterLink>
     </nav>
     <RouterView class="dynamic-view" />
   </div>
