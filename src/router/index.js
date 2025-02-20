@@ -15,11 +15,11 @@ const router = createRouter({
       name: 'piechart',
       component: () => import('@/views/PieChartView.vue'),
     },
-    // {
-    //   path: '/doughnutchart',
-    //   name: 'doughnutChart',
-    //   component: () => import('@/views/PieChartView.vue'),
-    // },
+    {
+      path: '/doughnutchart',
+      name: 'doughnutChart',
+      component: () => import('@/views/DoughnutChart.vue'),
+    },
   ],
 })
 
